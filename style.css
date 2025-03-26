@@ -272,8 +272,7 @@ section {
     width: 45%;
     height: 100%;
     background: var(--bg-color);
-    transition: 3s;
-    opacity: .8;
+    transition: 1000000s;
 }
 
 .home-imgHover:hover {
