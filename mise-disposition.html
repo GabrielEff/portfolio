@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mise à disposition d'un service informatique</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">Portfolio.</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <nav class="navbar">
+            <a href="index.html#home">Accueil</a>
+            <a href="index.html#about">À propos de Moi</a>
+            <a href="index.html#education">Parcours</a>
+            <a href="index.html#skills">Compétences</a>
+            <a href="index.html#contact">Projets</a>
+        </nav>
+    </header>
+
+    <section class="about" id="mode-projet">
+        <h2 class="heading">Mettre à disposition des utilisateurs un <span>service informatique</span></h2>
+
+        <div class="about-content">
+            <div class="hp">
+            <p>
+                Assurer la mise à disposition d’un service informatique ne se limite pas à son développement : cela implique aussi de garantir son accessibilité,
+                sa fiabilité et sa conformité aux besoins des utilisateurs. À travers mes projets, j’ai mis en œuvre des solutions concrètes, en déployant des 
+                applications, en configurant des environnements, et en assurant un accompagnement utilisateur pour un service fonctionnel, sécurisé et maintenable.
+            </p></div>
+
+            <div class="ex">
+                <h3>réaliser des testes d'intégration</h3>
+                <div class="desc">
+                    <p>
+                        Les tests d’intégration permettent de vérifier la bonne communication entre les différentes composantes d’une application. J’ai eu 
+                        l’occasion de mettre en place ce type de tests afin de m’assurer que les modules développés fonctionnaient correctement ensemble, sans 
+                        générer d’erreurs ou de conflits. Cette étape essentielle m’a permis d’anticiper les problèmes avant la mise en production, et de garantir 
+                        une meilleure stabilité du service livré.
+                    </p>
+                </div>
+                <button class="toggle-images">
+                    <i class='bx bx-chevron-down'></i> Voir les images
+                </button>
+                <div class="image-group">
+                        <div class="code-window">
+                            <pre><code>
+                            from django.test import TestCase
+                            from django.urls import reverse
+                            from django.contrib.auth import get_user_model
+                            from dockNmine.models import WorkGroup
+                            
+                            User = get_user_model()
+                            
+                            class GroupIntegrationTest(TestCase):
+                                def setUp(self):
+                                    self.user = User.objects.create_user(username='testuser', password='pass123')
+                                    self.client.login(username='testuser', password='pass123')
+                            
+                                def test_create_workgroup(self):
+                                    response = self.client.post(reverse('creategroup'), {
+                                        'name': 'TestGroup',
+                                        'password': 'secretpass',
+                                        'description': 'Projet test'
+                                    })
+                                    self.assertEqual(response.status_code, 302)
+                                    self.assertTrue(WorkGroup.objects.filter(name='TestGroup').exists())</code></pre>
+                            
+                            </div>
+                </div>
+            </div>
+
+            <div class="ex">
+                <h3>Déployer un service</h3>
+                <div class="desc">
+                    <p>
+                        Le déploiement d’un service informatique représente l’aboutissement d’un projet technique. Il s’agit de rendre accessible une 
+                        solution fonctionnelle dans un environnement sécurisé et stable. J’ai pu mettre en pratique cette compétence en installant des
+                        applications web, en configurant des serveurs, et en automatisant certaines étapes de mise en production afin de garantir une 
+                        mise en ligne fluide et conforme aux attentes des utilisateurs.
+                    </p>
+                </div>
+                <button class="toggle-images">
+                    <i class='bx bx-chevron-down'></i> Voir les images
+                </button>
+                <div class="image-group">
+                    <div class="screen-row">
+                        <img src="" alt="déploiement ministage">
+                        <img src="" alt="déploiment portfolio">
+                    </div>
+                </div>
+            </div>
+
+            <div class="ex">
+                <h3>Accompagner les utilisateurs dans la mise en place d’un service</h3>
+                <div class="desc">
+                    <p> 
+                        Dans le cadre de mon développement professionnel, je m’inscris dans une démarche de montée en compétences certifiée. Grâce à l’option 
+                        parcours de certification, je prépare activement plusieurs certifications reconnues dans le domaine de l’informatique. Ces certifications 
+                        me permettent non seulement de structurer mon apprentissage, mais aussi de valoriser mes acquis auprès des recruteurs. Elles constituent 
+                        une étape clé dans la construction d’un projet professionnel solide et en adéquation avec les besoins du marché.
+                    </p>
+                </div>
+                <button class="toggle-images">
+                    <i class='bx bx-chevron-down'></i> Voir les images
+                </button>
+                <div class="image-group">
+                    <div class="screen-row">
+                        <img src="images/graphique.png" alt="Cahier des charges">
+                        <img src="images/certifs.png" alt="User stories">
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+
+    <div class="navigation-links">
+        <a href="gerer-patrimoine.html" class="btn">Gérer le patrimoine</a>
+        <a href="repondre-incidents.html" class="btn">Incidents & demandes</a>
+        <a href="developper-presence.html" class="btn">Présence en ligne</a>
+        <a href="mode-projet.html" class="btn">Mode projet</a>
+        <a href="developpement-professionnel.html" class="btn">Dév. professionnel</a>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Gabriel EFFOUDOU OLLIVIER | Tous droits réservés.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

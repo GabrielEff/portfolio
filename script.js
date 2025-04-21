@@ -1,3 +1,37 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButtons = document.querySelectorAll('.toggle-images');
+
+  toggleButtons.forEach(button => {
+      button.addEventListener('click', () => {
+          const imageGroup = button.nextElementSibling;
+          if (imageGroup) {
+            imageGroup.classList.toggle('expanded');
+              button.classList.toggle('active');
+          }
+      });
+  });
+});
+
+// Ajout d'une lightbox pour afficher l'image en plein écran
+document.querySelectorAll('.screen-row img').forEach(img => {
+  img.addEventListener('click', function () {
+      const overlay = document.createElement('div');
+      overlay.className = 'image-overlay';
+      overlay.innerHTML = `
+          <div class="image-popup">
+              <img src="${this.src}" alt="${this.alt}">
+              <span class="close-btn">&times;</span>
+          </div>
+      `;
+      document.body.appendChild(overlay);
+
+      overlay.querySelector('.close-btn').addEventListener('click', () => {
+          overlay.remove();
+      });
+  });
+});
+
+
 // toggle icon navbar
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
@@ -118,6 +152,11 @@ const Confettiful = function(el) {
     congratsEl.style.display = 'none';
     el.style.display = 'none';
   });
+
+
+
+
+
   
 
   
