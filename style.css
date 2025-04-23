@@ -1537,6 +1537,39 @@ figcaption {
     }
 }
 
+@media (max-width: 1366px) {
+    html {
+        font-size: 55%;
+    }
+
+    .portfolio-layer h4 {
+        font-size: 2.4rem;
+    }
+
+    .portfolio-layer li {
+        font-size: 1.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 4.5rem;
+    }
+
+    .home-content .text-animate h3 {
+        font-size: 2.5rem;
+    }
+
+    .about-content h3 {
+        font-size: 2.2rem;
+    }
+
+    .about-content p,
+    .education-content .content p,
+    .skills-content .progress h3,
+    .skills-content .progress p {
+        font-size: 1.4rem;
+    }
+}
+
 
 
 
