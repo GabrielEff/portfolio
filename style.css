@@ -233,8 +233,8 @@ section {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 65px;
+    height: 65px;
     background: transparent;
     border: .2rem solid var(--main-color);
     border-radius: 50%;
