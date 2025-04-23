@@ -617,11 +617,15 @@ span {
     text-align: center;
     padding: 0 4rem;
     transform: translateY(100%);
+    opacity: 0;
     transition: .5s ease;
+    pointer-events: none;
 }
 
 .portfolio-box:hover .portfolio-layer {
     transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .portfolio-layer h4 {
@@ -1519,6 +1523,15 @@ figcaption {
         justify-content: center;
     }
 }
+
+@media (max-width: 768px) {
+    .portfolio-box .portfolio-layer {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
 
 
 
