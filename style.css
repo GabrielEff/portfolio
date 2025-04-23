@@ -1489,6 +1489,25 @@ span {
     box-shadow: 0 0 10px #000;
 }
 
+figure {
+    display: inline-block;
+    text-align: center;
+    margin: 1rem;
+    max-width: 250px; /* ou la taille de ton image */
+}
+
+figure img {
+    width: 100%; /* pour que l'image prenne toute la largeur du container */
+    height: auto;
+    border-radius: 1rem;
+}
+
+figcaption {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+    word-wrap: break-word;
+}
 
 
 
