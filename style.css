@@ -99,7 +99,7 @@ section {
 }
 
 .home-content {
-    max-width: 60rem;
+    max-width: 100rem;
     z-index: 99;
 }
 
@@ -117,7 +117,7 @@ section {
 
 .home-content .text-animate {
     position: relative;
-    width: 32.8rem;
+    width: 73.8rem;
 }
 
 .home-content .text-animate h3 {
@@ -128,7 +128,7 @@ section {
     background-image: linear-gradient(var(--main-color),var(--main-color));
     background-repeat: no-repeat;
     -webkit-background-clip: text;
-    background-position: -33rem 0;
+    background-position: -73.8rem 0;
 }
 
 .home.show-animate .home-content .text-animate h3 {
@@ -156,7 +156,7 @@ section {
 
 .home-content p {
     position: relative;
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     margin: 2rem 0 4rem;
 }
 
@@ -343,7 +343,7 @@ span {
 
 .about-content p {
     position: relative;
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     margin: 2rem 0 3rem;
 }
 
@@ -811,7 +811,7 @@ span {
 .navbar .animate, 
 #menu-icon .animate,
 .home.show-animate .animate {
-    animation: showRight 0.1s ease forwards;
+    animation: showRight 1s ease forwards;
     animation-delay: calc(.3s * var(--i));
 }
 
@@ -993,7 +993,7 @@ span {
     0%,
     10%,
     100% {
-        background-position: -33rem 0;
+        background-position: -73.8rem 0;
     }
 
     65%,
